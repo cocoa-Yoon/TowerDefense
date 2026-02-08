@@ -49,7 +49,7 @@ public class WaveManager : MonoBehaviour
     {
         isSpawning = true;
 
-        spawnInterval = Mathf.Max(0.5f, 2.0f - (currentWave * 0.1f));
+        spawnInterval = Mathf.Max(0.3f, 2.0f - (currentWave * 0.1f));
 
         int normalCount = 3 + currentWave;
         int specialCount = 0;
@@ -106,7 +106,7 @@ public class WaveManager : MonoBehaviour
             int index = Random.Range(0, 2);
             Instantiate(pool[index], spawnPoint.position, Quaternion.identity);
         }
-        else if (currentWave>=16)
+        else if (currentWave>=16&& currentWave<=20)
         {
             int index = Random.Range(0, 3);
             Instantiate(pool[index], spawnPoint.position, Quaternion.identity);
@@ -126,9 +126,18 @@ public class WaveManager : MonoBehaviour
             int index = Random.Range(0, 1);
             Instantiate(pool[index], spawnPoint.position, Quaternion.identity);
         }        
-        else
+        else if(currentWave>=21&& currentWave<=30)
         {
             int index = Random.Range(0, 2);
+            Instantiate(pool[index], spawnPoint.position, Quaternion.identity);
+        }
+        else
+        {
+            int index = Random.Range(0, 4);
+            if (index == 2 || index == 3) 
+            {
+                index = 1;
+            }
             Instantiate(pool[index], spawnPoint.position, Quaternion.identity);            
         }
         aliveMonsterCount++;
