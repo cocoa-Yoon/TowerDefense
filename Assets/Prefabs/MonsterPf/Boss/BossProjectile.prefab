@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2821276006239896249
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2473567730587822344}
+  - component: {fileID: 5425614490969322168}
+  m_Layer: 0
+  m_Name: BossProjectile
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2473567730587822344
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2821276006239896249}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.50714, y: -0.11281, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5425614490969322168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2821276006239896249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a398f95b0c729b44a5e7fa9cdd92f93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossProjectile
+  speed: 6
+  disableTime: 8
+  disableFlyEffect: {fileID: 3106157869508675593, guid: fa37e00dcbe27934985b9bd79c324a1e, type: 3}
+  destroyFlyEffect: {fileID: 6696441513172281615, guid: 1aa515a957958d241884e6aa1944b626, type: 3}
+  disableHitEffect: {fileID: 7617627960765149530, guid: 8f5e84189a99da64a87b17c1e96c6012, type: 3}
+  destroyHitEffect: {fileID: 9113555862921109287, guid: 7bb525c2c690b844eab172639c35e492, type: 3}
