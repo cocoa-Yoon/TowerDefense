@@ -7,6 +7,7 @@ public class DisableEffect : MonoBehaviour
 
     SpriteRenderer sr;
     Color baseColor;
+    Coroutine currentRoutine;
 
     void Awake()
     {
@@ -16,24 +17,29 @@ public class DisableEffect : MonoBehaviour
 
     public void Play(float disableTime)
     {
-        StartCoroutine(EffectRoutine(disableTime));
+        if (currentRoutine != null) StopCoroutine(currentRoutine);
+        currentRoutine = StartCoroutine(EffectRoutine(disableTime));
     }
 
     IEnumerator EffectRoutine(float disableTime)
     {
-        // 무력화 시간 동안 유지
+        // 1. 무력화 시간 대기
         yield return new WaitForSeconds(disableTime);
 
-        // 서서히 사라지기
+        // 2. 페이드 아웃
         float t = 0f;
         while (t < fadeDuration)
         {
             t += Time.deltaTime;
-            float a = Mathf.Lerp(1f, 0f, t / fadeDuration);
-            sr.color = new Color(baseColor.r, baseColor.g, baseColor.b, a);
+            // Color 구조체를 새로 생성하지 않고 직접 수정 (최적화)
+            Color tempColor = sr.color;
+            tempColor.a = Mathf.Lerp(1f, 0f, t / fadeDuration);
+            sr.color = tempColor;
             yield return null;
         }
 
+        // 3. 확실하게 투명하게 만든 후 파괴
+        sr.color = new Color(baseColor.r, baseColor.g, baseColor.b, 0f);
         Destroy(gameObject);
     }
 }

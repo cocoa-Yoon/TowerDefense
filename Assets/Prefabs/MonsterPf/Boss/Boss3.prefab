@@ -100,10 +100,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MonsterHP
   hpBarCanvas: {fileID: 962105499363838005}
   redBar: {fileID: 6835804586648646029}
-  maxHp: 160000
+  maxHp: 200000
   reward: 5
   hpBarOffset: {x: 0, y: 1, z: 0}
-  isBoss: 0
+  isBoss: 1
+  isSpecial: 0
 --- !u!114 &-8037301928189913793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,7 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffbe60917dc83d7498b98c7ea2cbbf9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MonsterMove
-  baseSpeed: 1
+  baseSpeed: 0.65
   arriveDistance: 0.1
   currentTile: {x: 0, y: 0, z: 0}
 --- !u!114 &2751018864425143101

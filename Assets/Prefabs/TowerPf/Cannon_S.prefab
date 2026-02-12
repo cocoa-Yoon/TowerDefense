@@ -107,17 +107,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdace3266a4d3bd4b8e5dbccbf7f6574, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 50
+  damage: 40
   attackRange: 5.5
   attackDelay: 0.3
   rotateSpeed: 720
   level: 1
   maxLevel: 3
-  damagePerLevel: 40
+  damagePerLevel: 30
   rangePerLevel: 0.4
   delayPerLevel: 0.05
-  upgradeCost: 60
-  upgradeCostIncrement: 40
+  upgradeCost: 80
+  upgradeCostIncrement: 60
   sellGold: 60
   rangeObj: {fileID: 3089030215410851726}
   placedCell: {x: 0, y: 0, z: 0}

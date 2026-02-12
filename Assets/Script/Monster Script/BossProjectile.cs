@@ -54,7 +54,6 @@ public class BossProjectile : MonoBehaviour
 
     void Hit()
     {
-        // 이미 Init에서 Tower를 target으로 받아왔으므로 다시 찾을 필요가 없습니다.
         if (target == null)
         {
             Destroy(gameObject);
@@ -66,9 +65,14 @@ public class BossProjectile : MonoBehaviour
             if (disableHitEffect)
             {
                 SoundManager.Instance.PlayBossDisable();
-                Instantiate(disableHitEffect, target.transform.position, Quaternion.identity);
+                GameObject go = Instantiate(disableHitEffect, target.transform.position, Quaternion.identity);
+                
+                DisableEffect effect = go.GetComponent<DisableEffect>();
+                if (effect != null)
+                {
+                    effect.Play(disableTime);
+                }
             }
-            // 타워의 Disable 함수 호출
             target.Disable(disableTime);
         }
         else if (skillType == BossSkillType.Destroy)

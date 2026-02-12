@@ -85,7 +85,11 @@ public class MonsterHP : MonoBehaviour
     {
         if (isBoss)
         {
-            SoundManager.Instance.PlayBossDie();
+            if (WaveManager.Instance.CheckLastWave())
+            {
+                return;
+            }
+            else SoundManager.Instance.PlayBossDie();
         }
         else if (isSpecial)
         {

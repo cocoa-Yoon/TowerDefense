@@ -111,7 +111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hpBarCanvas: {fileID: 2642481994164632045}
   redBar: {fileID: 8587316143321628757}
-  maxHp: 2500
+  maxHp: 8000
   reward: 20
   hpBarOffset: {x: 0, y: 1.2, z: 0}
   isBoss: 0

@@ -103,7 +103,8 @@ MonoBehaviour:
   maxHp: 7000
   reward: 100
   hpBarOffset: {x: 0, y: 0.8, z: 0}
-  isBoss: 0
+  isBoss: 1
+  isSpecial: 0
 --- !u!114 &-8729972775783861078
 MonoBehaviour:
   m_ObjectHideFlags: 0

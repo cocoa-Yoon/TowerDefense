@@ -100,10 +100,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MonsterHP
   hpBarCanvas: {fileID: 5648837441394725546}
   redBar: {fileID: 2153580912479562514}
-  maxHp: 20000
+  maxHp: 22000
   reward: 200
   hpBarOffset: {x: 0, y: 0.9, z: 0}
-  isBoss: 0
+  isBoss: 1
+  isSpecial: 0
 --- !u!114 &4499771460027084498
 MonoBehaviour:
   m_ObjectHideFlags: 0

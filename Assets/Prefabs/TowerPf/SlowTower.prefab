@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 7274196611552310207}
   m_Layer: 6
   m_Name: SlowTower
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,7 +147,7 @@ MonoBehaviour:
   delayPerLevel: 0.1
   upgradeCost: 50
   upgradeCostIncrement: 50
-  sellGold: 25
+  sellGold: 60
   rangeObj: {fileID: 7802973139716895641, guid: 95f7909df45b11345bd4b087918876e6, type: 3}
   placedCell: {x: 0, y: 0, z: 0}
   disableIcon: {fileID: 0}

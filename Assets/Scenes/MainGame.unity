@@ -1515,7 +1515,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerPrefab: {fileID: 3488348144814769459, guid: 255e9140b6474ef4a92676c9e1883418, type: 3}
-  towerCost: 100
+  towerCost: 120
   button: {fileID: 277705835}
   icon: {fileID: 143153504}
 --- !u!114 &277705835
@@ -17221,7 +17221,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 100G
+  m_text: 120G
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 18980bd287dc03b438de60135d19fb09, type: 2}
   m_sharedMaterial: {fileID: -2276973355365662418, guid: 18980bd287dc03b438de60135d19fb09, type: 2}
@@ -18540,16 +18540,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c800dad26706514a9d126e8d050d40e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameMenuManager
-  mainMenuPanel: {fileID: 480837504}
-  difficultyPanel: {fileID: 371927508}
-  optionPanel: {fileID: 1313904508}
-  creditPanel: {fileID: 1373086029}
-  gameWinPanel: {fileID: 325266780}
-  gameLosePanel: {fileID: 1203223095}
-  sideCanvas: {fileID: 755941521}
-  currentDifficulty: 1
-  startLife: 10
-  startGold: 30
 --- !u!114 &1286602657
 MonoBehaviour:
   m_ObjectHideFlags: 0

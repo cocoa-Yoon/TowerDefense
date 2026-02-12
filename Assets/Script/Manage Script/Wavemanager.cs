@@ -31,6 +31,7 @@ public class WaveManager : MonoBehaviour
     int currentWave = 0;
     public int aliveMonsterCount = 0;
     bool isSpawning = false;
+    bool isLastWave = false;
 
     void Awake()
     {
@@ -140,7 +141,7 @@ public class WaveManager : MonoBehaviour
             return;
         }
 
-        Instantiate(bossPrefab, spawnPoint.position, Quaternion.identity);
+        SpawnMonster(bossPrefab, spawnPoint.position);
 
         CheckWaveEnd();
     }
@@ -156,7 +157,7 @@ public class WaveManager : MonoBehaviour
 
         for (int i = 0; i < 5; i++)
         {
-            int index = Random.Range(0, 1);
+            int index = Random.Range(0, 4);
             if(index==0)
             {
                 SpawnMonster(boss1Prefab, spawnPoint.position);
@@ -165,8 +166,10 @@ public class WaveManager : MonoBehaviour
             {
                 SpawnMonster(boss2Prefab, spawnPoint.position);
             }
-            yield return new WaitForSeconds(spawnInterval+1f);
+            yield return new WaitForSeconds(1.6f);
         }
+
+        yield return new WaitForSeconds(3f);
 
         SpawnMonster(boss3Prefab, spawnPoint.position);
 
@@ -292,5 +295,18 @@ public class WaveManager : MonoBehaviour
         waveText.text = "Wave : 0";
 
         SetButtonState(true);
+    }
+
+    public bool CheckLastWave()
+    {
+        if (currentWave == 40)
+        {
+            isLastWave = true;
+            return true;
+        }
+        else 
+        {
+            return false; 
+        }
     }
 }

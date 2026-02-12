@@ -58,7 +58,12 @@ public class GameMenuManager : MonoBehaviour
 
     public void OnClickOption() { AllClose(); optionPanel.SetActive(true); }
     public void OnClickCredit() { AllClose(); creditPanel.SetActive(true); }
-    public void OnClickBack() { ShowMainMenu(); }
+    
+    public void OnClickBack() 
+    { 
+        SoundManager.Instance.PlayBGM(SoundManager.Instance.normalBgm); 
+        ShowMainMenu(); 
+    }
 
     public float DifficultyMultiplier
     {
@@ -80,7 +85,8 @@ public class GameMenuManager : MonoBehaviour
 
     public void SelectDifficultyAndStart(int level)
     {
-        SetDifficulty(level);
+        ResetGame();
+        SetDifficulty(level);        
         StartGame();
     }
 
@@ -125,6 +131,7 @@ public class GameMenuManager : MonoBehaviour
         AllClose();
         sideCanvas.SetActive(false);
         Time.timeScale = 0f;
+        SoundManager.Instance.StopBGM();
 
         if (isWin) gameWinPanel.SetActive(true);
         else gameLosePanel.SetActive(true);
@@ -133,6 +140,7 @@ public class GameMenuManager : MonoBehaviour
     public void OnClickRetry()
     {
         ResetGame();
+        SoundManager.Instance.PlayBGM(SoundManager.Instance.normalBgm);
         OnClickStart(); 
     }
 
