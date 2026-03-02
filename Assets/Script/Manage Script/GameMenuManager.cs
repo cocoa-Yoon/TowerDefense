@@ -153,6 +153,26 @@ public class GameMenuManager : MonoBehaviour
         #endif
     }
 
+    public void OnClickContinue()
+    {
+        AdsManager.Instance.ShowRewardedAd(() =>
+        {
+            // ⭐ 광고 다 보고 보상 받은 뒤 실행됨
+            AllClose();
+            sideCanvas.SetActive(true);
+            WaveManager.Instance.aliveMonsterCount = 0;
+            WaveManager.Instance.CheckWaveEnd();
+            
+            GameObject[] monsters = GameObject.FindGameObjectsWithTag("Monster");
+            foreach (GameObject m in monsters)
+                Destroy(m);
+
+            Time.timeScale = 1f;
+
+            
+        });
+    }
+
     private void AllClose()
     {
         mainMenuPanel.SetActive(false);

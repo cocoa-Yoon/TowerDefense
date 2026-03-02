@@ -252,7 +252,7 @@ public class WaveManager : MonoBehaviour
         CheckWaveEnd();
     }
 
-    void CheckWaveEnd()
+    public void CheckWaveEnd()
     {
         if (!isSpawning && aliveMonsterCount <= 0)
         {

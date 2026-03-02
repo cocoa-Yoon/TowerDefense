@@ -107,7 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SlowBullet
   speed: 6
   slowRadius: 2.5
-  slowRate: 0.8
+  slowRate: 0.65
   slowDuration: 2
 --- !u!58 &6041419332573092880
 CircleCollider2D:

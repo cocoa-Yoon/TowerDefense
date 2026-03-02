@@ -3939,6 +3939,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 706499837}
   m_CullTransparentMesh: 1
+--- !u!1 &732853121
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 732853122}
+  - component: {fileID: 732853123}
+  m_Layer: 0
+  m_Name: AdsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &732853122
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732853121}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 802750164}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &732853123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732853121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcd8a1ea3267b8348840b2afa3ca90f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AdsManager
 --- !u!1 &745774842
 GameObject:
   m_ObjectHideFlags: 0
@@ -13659,6 +13703,7 @@ Transform:
   - {fileID: 996374159}
   - {fileID: 1900077234}
   - {fileID: 1286602655}
+  - {fileID: 732853122}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &847730990
@@ -18337,7 +18382,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Try Again
+  m_text: Continue
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e12f1086a9471e745af2ceea2ba4fa9c, type: 2}
   m_sharedMaterial: {fileID: -2580958066805620970, guid: e12f1086a9471e745af2ceea2ba4fa9c, type: 2}
@@ -18504,7 +18549,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1286602655}
-  - component: {fileID: 1286602656}
   - component: {fileID: 1286602657}
   m_Layer: 0
   m_Name: GameMenuManager
@@ -18528,18 +18572,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 802750164}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1286602656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1286602654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c800dad26706514a9d126e8d050d40e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameMenuManager
 --- !u!114 &1286602657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19050,7 +19082,7 @@ GameObject:
   - component: {fileID: 1349664919}
   - component: {fileID: 1349664922}
   m_Layer: 5
-  m_Name: Retry
+  m_Name: PlayContinue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19122,7 +19154,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1286602657}
         m_TargetAssemblyTypeName: GameMenuManager, Assembly-CSharp
-        m_MethodName: OnClickRetry
+        m_MethodName: OnClickContinue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

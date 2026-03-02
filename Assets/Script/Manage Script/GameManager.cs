@@ -17,6 +17,12 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
     }
 
+    public void AddLife(int reward)
+    {
+        life = reward;
+        UIManager.Instance.UpdateLife(life);
+    }
+
     public void AddGold(int reward)
     {
         gold += reward;
